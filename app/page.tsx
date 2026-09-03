@@ -46,14 +46,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="statement" id="nosotros">
-        <p className="section-kicker">Nuestro propósito</p>
-        <div className="statement-grid"><h2>Convertimos la incertidumbre tecnológica en <span>confianza verificable.</span></h2><div><p>Actuamos como un tercero independiente que examina la arquitectura lógica, los controles y los flujos de información de cada organización.</p><div className="values-row"><span>Integridad</span><span>Objetividad</span><span>Confidencialidad</span><span>Escepticismo profesional</span></div></div></div>
+      <section className="statement" id="nosotros" aria-labelledby="nosotros-title">
+        <p className="section-kicker">Quiénes somos</p>
+        <div className="statement-grid"><h2 id="nosotros-title">Tecnología cercana para impulsar <span>soluciones reales.</span></h2><div><p>Garantía Digital Consultores es un equipo comprometido con el uso estratégico de la tecnología para acompañar la transformación y modernización de empresas, emprendedores e instituciones. Nuestro trabajo combina conocimiento técnico, atención cercana y soluciones orientadas a las necesidades de cada cliente.</p><div className="values-row" aria-label="Valores corporativos"><span>Integridad</span><span>Objetividad</span><span>Confidencialidad</span><span>Escepticismo profesional</span></div></div></div>
       </section>
 
       <section className="purpose-pair" aria-label="Misión y visión">
-        <article><span className="purpose-icon"><ShieldCheck size={25} /></span><p className="section-kicker">Misión</p><h2>Confianza institucional y fe pública</h2><p>Brindar confianza institucional y fe pública mediante la evaluación rigurosa de la infraestructura tecnológica de las organizaciones, garantizando la seguridad, fiabilidad y cumplimiento normativo de sus datos.</p></article>
-        <article><span className="purpose-icon"><Building2 size={25} /></span><p className="section-kicker">Visión 2030</p><h2>Liderazgo nacional en aseguramiento</h2><p>Ser para el año 2030 la firma líder en el territorio nacional dentro del mercado de aseguramiento de información, reconocida por transformar los riesgos tecnológicos en ventajas competitivas y transparentes para las empresas.</p></article>
+        <article aria-labelledby="mision-title"><span className="purpose-icon" aria-hidden="true"><ShieldCheck size={25} /></span><p className="section-kicker">Misión</p><h2 id="mision-title">Tecnología aplicada a necesidades reales</h2><p>En Garantía Digital Consultores ayudamos a empresas, emprendedores e instituciones a aprovechar la tecnología para mejorar sus procesos, fortalecer su presencia digital y desarrollar soluciones que respondan a sus necesidades reales. Ofrecemos servicios de ingeniería en tecnologías de la información con un acompañamiento cercano, práctico y orientado a resultados.</p></article>
+        <article aria-labelledby="vision-title"><span className="purpose-icon" aria-hidden="true"><Building2 size={25} /></span><p className="section-kicker">Visión</p><h2 id="vision-title">Referentes en Cartagena y la región Caribe</h2><p>Ser una empresa referente en servicios de tecnología y transformación digital en Cartagena de Indias y la región Caribe, reconocida por la calidad de nuestras soluciones, la innovación y la confianza que construimos con cada cliente, contribuyendo al crecimiento y modernización de organizaciones y negocios.</p></article>
       </section>
 
       <section className="services" id="servicios">

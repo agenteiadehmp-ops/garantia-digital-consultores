@@ -109,3 +109,8 @@ h1 { animation:rise .8s cubic-bezier(.2,.8,.2,1) both; }.hero-lead { animation:r
 .location-label { margin-top:32px; padding-top:20px; border-top:1px solid rgba(255,255,255,.15); color:#80c7b0; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.1em; }
 @media (max-width:900px) { .purpose-pair,.team-layout,.location-section { grid-template-columns:1fr; } .purpose-pair { margin-bottom:75px; } .location-copy { padding:70px 28px; } .location-image img { min-height:420px; } }
 @media (max-width:560px) { .purpose-pair article,.founders-panel,.org-panel { padding:28px 22px; } .org-branches { grid-template-columns:1fr; } .org-branches:before,.org-branches article:before { display:none; } .team-section { padding-top:75px; padding-bottom:75px; } .service-card { min-height:330px; } }
+
+.team-collage { margin:0 0 28px; overflow:hidden; background:var(--sky); border:1px solid var(--line); }
+.team-collage img { display:block; width:100%; aspect-ratio:5/2; object-fit:cover; }
+.team-collage figcaption { padding:11px 14px; color:var(--muted); font-size:12px; line-height:1.45; text-align:left; }
+@media (max-width:560px) { .team-collage img { aspect-ratio:5/2.3; } }

@@ -15,7 +15,13 @@ const sectors = [
   { icon: HeartPulse, title: "Sector salud", text: "Entidades que administran historias clínicas digitales." },
 ];
 
-const team = ["Erix Albanis Maza Rosales", "Estela A. Medrano Santamaria", "Diana Paola Molina Lora", "Kattya P. Reyes Espitia", "Brenda Álvarez Peña"];
+const team = [
+  { name: "Estela A. Medrano Santamaria", portrait: 0 },
+  { name: "Kattya P. Reyes Espitia", portrait: 1 },
+  { name: "Erix Albanis Maza Rosales", portrait: 2 },
+  { name: "Diana Paola Molina Lora", portrait: 3 },
+  { name: "Brenda Álvarez Peña", portrait: 4 },
+];
 
 export default function Home() {
   return (
@@ -70,7 +76,7 @@ export default function Home() {
 
       <section className="team-section" id="equipo">
         <div className="section-heading"><div><p className="section-kicker">Nuestro equipo</p><h2>Una firma construida sobre criterio e independencia</h2></div><p>Un equipo reunido para evaluar los riesgos tecnológicos con integridad, objetividad, confidencialidad y escepticismo profesional.</p></div>
-        <div className="team-layout"><div className="founders-panel"><div className="team-symbol"><Users size={32} /></div><figure className="team-collage"><img loading="lazy" width="1800" height="600" src="/equipo-fundador.jpg" alt="Retratos de las cinco personas que integran el equipo fundador de Garantía Digital Consultores" /><figcaption>Equipo fundador de Garantía Digital Consultores</figcaption></figure><p className="small-label">Integrantes</p><div className="founder-list">{team.map((member, index) => <div className="founder" key={member}><span>{String(index + 1).padStart(2, "0")}</span><strong>{member}</strong></div>)}</div></div><div className="org-panel"><p className="small-label">Organigrama funcional</p><div className="org-root"><Users size={19} /> Socios fundadores</div><span className="org-line" /><div className="org-quality"><ShieldCheck size={18} /> Gerencia de Calidad<small>Cumplimiento normativo y control</small></div><div className="org-branches"><article><ServerCog size={22} /><h3>Área de Aseguramiento en Sistemas</h3><p>Líder de Seguridad de Información<br />Auditor Senior de Plataformas<br />Analista de Riesgos Digitales</p></article><article><Network size={22} /><h3>Área de Auditoría Contable y TI</h3><p>Especialista en Control Interno<br />Auditor de Procesos Financieros<br />Asistente de Pruebas de Cumplimiento</p></article></div></div></div>
+        <div className="team-layout"><div className="team-members" aria-label="Equipo fundador">{team.map(({ name, portrait }) => <article className="member-card" key={name}><div className="member-portrait"><img loading="lazy" decoding="async" src="/equipo-fundador.jpg" alt={name} style={{ left: `-${portrait * 100}%` }} /></div><div className="member-caption"><h3>{name}</h3></div></article>)}</div><div className="org-panel"><p className="small-label">Organigrama funcional</p><div className="org-root"><Users size={19} /> Socios fundadores</div><span className="org-line" /><div className="org-quality"><ShieldCheck size={18} /> Gerencia de Calidad<small>Cumplimiento normativo y control</small></div><div className="org-branches"><article><ServerCog size={22} /><h3>Área de Aseguramiento en Sistemas</h3><p>Líder de Seguridad de Información<br />Auditor Senior de Plataformas<br />Analista de Riesgos Digitales</p></article><article><Network size={22} /><h3>Área de Auditoría Contable y TI</h3><p>Especialista en Control Interno<br />Auditor de Procesos Financieros<br />Asistente de Pruebas de Cumplimiento</p></article></div></div></div>
       </section>
 
       <section className="sectors" id="sectores">

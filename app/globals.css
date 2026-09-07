@@ -265,3 +265,20 @@ footer { font-size:13px; line-height:1.6; }
  .quote-band p { font-size:26px; }
 }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+
+/* Individually labelled portraits; reuse the existing five-panel image. */
+.team-members { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; align-items:stretch; }
+.member-card { min-width:0; overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 24px #0b31540a; transition:transform .25s,box-shadow .25s; }
+.member-card:hover { transform:translateY(-4px); box-shadow:0 16px 34px #0b315418; }
+.member-portrait { position:relative; width:100%; aspect-ratio:3/5; overflow:hidden; background:var(--sky); }
+.member-portrait img { position:absolute; top:0; display:block; width:500%; max-width:none; height:100%; object-fit:fill; }
+.member-caption { padding:20px 16px; border-top:3px solid var(--orange); }
+.member-caption h3 { margin:0; color:var(--navy); font:700 18px/1.45 Georgia,serif; overflow-wrap:break-word; }
+@media (max-width:1000px) { .team-members { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; } }
+@media (max-width:700px) { .team-members { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; } }
+@media (max-width:480px) {
+ .team-members { grid-template-columns:minmax(0,1fr); width:100%; max-width:340px; margin-inline:auto; gap:26px; }
+ .member-caption { padding:20px 22px; }
+ .member-caption h3 { font-size:22px; line-height:1.4; }
+}
+@media (prefers-reduced-motion:reduce) { .member-card { transition:none; } .member-card:hover { transform:none; } }

@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Garantía Digital Consultores",
-  description: "Auditoría y aseguramiento de sistemas de información, seguridad digital e integridad de datos.",
+  description: "Procedimientos acordados NISR 4400 y compilación de información tecnológica NISR 4410 en Cartagena de Indias. Conozca nuestro equipo y servicios.",
   icons: { icon: "/logo.png", shortcut: "/logo.png" },
 };
 
